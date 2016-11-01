@@ -1,0 +1,15 @@
+<ion-view view-title="Page 1">
+    <ion-content class="padding" ng-init="items=['aslan','asla','asdf','dödö','dödöd','x']">
+        <input placeholder="filter" ng-model="f" />
+        <div ng-repeat="item in items | filter:f" class="repeat-item">
+            {{item}}
+        </div>
+        <div ng-init="on=true">
+            <button ng-click="on=!on">Toggle On/Off</button>
+            <div class="my-special-animation" ng-if="on">
+                This content will enter and leave
+            </div>
+            </div>
+    </ion-content>
+
+</ion-view>
